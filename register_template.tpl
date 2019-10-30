@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body background="fundo.jpg">
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">SPORTS FORUM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Register</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container" >
+  <h2 style="color: #ffffff">Register</h2>
+  <form>
+    <div class="form-group">
+      <label for="usr" style="color: #ffffff">Name:</label>
+      <input type="text" class="form-control" id="usr " name="name" value="{$name}" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd" style="color: #ffffff">Email:</label>
+      <input type="text" class="form-control" id="email" name="email" value="{$email}" required>
+    <div class="form-group">
+      <label for="pwd" style="color: #ffffff">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="password" value="{$password}" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd" style="color: #ffffff">Password confirmation:</label>
+      <input type="password" class="form-control" id="pwd" name="password_confirmation" value="{$password_confirmation}" required>
+    </div>
+    <div align="center" class="container">
+      <button type="button"  " class="btn">Go</button>
+     <button type="button"  " class="btn">Clear</button>
+   </div>
+     
+    <br>
+
+  </form>
+</div>
+
+</body>
+</html>
