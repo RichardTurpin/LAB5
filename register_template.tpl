@@ -33,21 +33,21 @@
 </nav>
 <div class="container" >
   <h2 style="color: #ffffff">Register</h2>
-  <form>
+  <form class="form-horizontal" action="register_action.php" method="POST">
     <div class="form-group">
       <label for="usr" style="color: #ffffff">Name:</label>
       <input type="text" class="form-control" id="usr " name="name" value="{$name}" required>
     </div>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Email:</label>
-      <input type="text" class="form-control" id="email" name="email" value="{$email}" required>
+      <input type="email" class="form-control" id="email" name="email" value="{$email}" required>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Password:</label>
-      <input type="password" class="form-control" id="pwd" name="password" value="{$password}" required>
+      <input type="password" class="form-control" id="pwd" name="password"  required>
     </div>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Password confirmation:</label>
-      <input type="password" class="form-control" id="pwd" name="password_confirmation" value="{$password_confirmation}" required>
+      <input type="password" class="form-control" id="pwd" name="password_confirmation" required>
     </div>
     <div align="center" class="container">
       <button type="button"  " class="btn">Go</button>
