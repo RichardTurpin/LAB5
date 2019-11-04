@@ -30,12 +30,12 @@ if($db)
   	 }
  	elseif(empty($_POST['password']) or empty($_POST['password_confirmation']))
   	{
-  		header("Location: register.php?Error=3&name=name&email=email");  
+  		header("Location: register.php?Error=3&name=$name&email=$email");  
 
   	}
   	elseif(  $_POST['password'] != $_POST['password_confirmation'] )
   	{
-  		header("Location: register.php?Error=4&name=name&email=email");  
+  		header("Location: register.php?Error=4&name=$name&email=$email");  
 
   	}
 	else
