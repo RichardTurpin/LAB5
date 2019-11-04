@@ -36,9 +36,18 @@ if($db)
   		header("Location: register.php?$Error=4&$name=$_POST['name']&$email=$_POST['email']");  
 
   	}
+
+  $name  = $_POST[name];
+  $password = substr(md5($_POST['password']),0,32));
+  $email    = $_POST[email];
+  $sql_insert = "INSERT INTO users(name,password,email, created_at,updated_at)
+                 VALUES('$name','$password','$email',NOW(),NOW())";
+
+   if(!mysql_query($sql_insert,$db))
+     showerror();
+
+  mysql_close($db);
 }
-
-
 
 
 header("Location: register_success.html"); 
