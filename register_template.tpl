@@ -50,8 +50,8 @@
       <input type="password" class="form-control" id="pwd" name="password_confirmation" required>
     </div>
     <div align="center" class="container">
-      <button type="button"  " class="btn">Go</button>
-     <button type="button"  " class="btn">Clear</button>
+      <button type="submit"  " class="btn">Go</button>
+     <button type="reset"  " class="btn">Clear</button>
    </div>
      
     <br>
