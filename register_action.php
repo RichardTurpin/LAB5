@@ -10,7 +10,7 @@ $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db)
 {
 	$name  = $_POST[name];
-  	$password = substr(md5($_POST['password']),0,32));
+  	$password = substr(md5($_POST['password']),0,32);
   	$email    = $_POST[email];
 	if( $_POST['name']    == '' or
      $_POST['email']  == '' or
