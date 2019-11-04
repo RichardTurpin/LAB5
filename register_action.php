@@ -9,8 +9,10 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db)
 {
-	
-	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
+	$name  = $_POST['name'];
+  	$password = substr(md5($_POST['password']),0,32);
+  	$email    = $_POST['email'];	
+	if(empty($name) or empty($email) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
 	{
    		header("Location: register.php?$Error=0");   
   	}
