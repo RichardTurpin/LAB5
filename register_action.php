@@ -9,22 +9,21 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db)
 {
-	$name  = $_POST['name'];
-  	$password = substr(md5($_POST['password']),0,32);
-  	$email    = $_POST['email'];	
-	if(empty($name) or empty($email) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
+
+	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
 	{
    		header("Location: register.php?$Error=0");   
   	}
   	$name  = $_POST['name'];
   	$password = substr(md5($_POST['password']),0,32);
   	$email    = $_POST['email'];
-	$query = "SELECT * FROM users WHERE email = '" .$_POST['email'] ."'";
+	$query = "SELECT * FROM users WHERE email = '$email'";
 	$result = @ mysql_query($query,$db);
-	if(!$result)
-     showerror();
- 	elseif(mysql_num_rows($result) > 0)
+ 	if(mysql_num_rows($result) > 0)
  	 {
+ 	 	print_r($query."<br>");
+ 	 	print_r($_POST."<br>");
+ 	 	print_r(empty($_POST['name']));
       	header("Location: register.php?Error=1");
   	 }
  	elseif(  $_POST['password'] == '' &&
