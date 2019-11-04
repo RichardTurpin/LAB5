@@ -28,7 +28,7 @@ if($db)
  	elseif(  $_POST['password'] == '' &&
      $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
   	{
-  		header("Location: register.php?$Error=3&name=$_POST['name']&email=$_POST['email']");  
+  		header("Location: register.php?Error=3&name=$_POST['name']&email=$_POST['email']");  
 
   	}
   	elseif(  $_POST['password'] != $_POST['password_confirmation'] )
