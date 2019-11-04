@@ -16,11 +16,11 @@ if($db)
      $_POST['password_confirmation']=='' ) 
 	{
    		header("Location: register.php?$Error=0");   
-  }
-  	$name  = $_POST[name];
+  	}
+  	$name  = $_POST['name'];
   	$password = substr(md5($_POST['password']),0,32);
-  	$email    = $_POST[email];
-	$query = "SELECT * FROM users WHERE email = '" .$_POST[email] ."'";
+  	$email    = $_POST['email'];
+	$query = "SELECT * FROM users WHERE email = '" .$_POST['email'] ."'";
 	$result = @ mysql_query($query,$db);
 	if(!$result)
      showerror();
