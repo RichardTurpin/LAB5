@@ -20,7 +20,7 @@ if($db)
 	$query = "SELECT * FROM users WHERE email = '$email'";
 	$result = @ mysql_query($query,$db);
 
- 	elseif(  $_POST['password'] == '' &&
+ 	if(  $_POST['password'] == '' &&
      $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
   	{
   		header("Location: register.php?Error=3&name=name&email=email");  
