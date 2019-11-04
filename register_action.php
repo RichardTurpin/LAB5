@@ -24,7 +24,7 @@ if($db)
  	 	print_r($query."<br>");
  	 	print_r($_POST."<br>");
  	 	print_r(empty($_POST['name']));
-      	header("Location: register.php?Error=1");
+      	//header("Location: register.php?Error=1");
   	 }
  	elseif(  $_POST['password'] == '' &&
      $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
