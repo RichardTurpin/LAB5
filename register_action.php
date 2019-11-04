@@ -9,11 +9,6 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db)
 {
-	print_r($_POST);
-	print_r(empty($_POST['name']));
-	print_r(empty($_POST['email']));
-	print_r(empty($_POST['password']));
-	print_r(empty($_POST['password_confirmation']));
 
   	$name  = $_POST['name'];
   	$password = substr(md5($_POST['password']),0,32);
