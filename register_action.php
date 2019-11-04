@@ -22,9 +22,6 @@ if($db)
 	$result = @ mysql_query($query,$db);
  	if(mysql_num_rows($result) > 0)
  	 {
- 	 	print_r($query."<br>");
- 	 	print_r($_POST."<br>");
- 	 	print_r(empty($_POST['name']));
       	//header("Location: register.php?Error=1");
   	 }
  	elseif(  $_POST['password'] == '' &&
