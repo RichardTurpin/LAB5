@@ -14,28 +14,29 @@ if($db)
 	print_r(empty($_POST['email']));
 	print_r(empty($_POST['password']));
 	print_r(empty($_POST['password_confirmation']));
-	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
-	{
-   		header("Location: register.php?Error=0");   
-  	}
+
   	$name  = $_POST['name'];
   	$password = substr(md5($_POST['password']),0,32);
   	$email    = $_POST['email'];
 	$query = "SELECT * FROM users WHERE email = '$email'";
 	$result = @ mysql_query($query,$db);
- 	if(mysql_num_rows($result) > 0)
+
+	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
+	{
+   		header("Location: register.php?Error=0");   
+  	} elseif(mysql_num_rows($result) > 0)
  	 {
-      	//header("Location: register.php?Error=1");
+      	header("Location: register.php?Error=1");
   	 }
  	elseif(  $_POST['password'] == '' &&
      $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
   	{
-  		//header("Location: register.php?Error=3&name=name&email=email");  
+  		header("Location: register.php?Error=3&name=name&email=email");  
 
   	}
   	elseif(  $_POST['password'] != $_POST['password_confirmation'] )
   	{
-  		//header("Location: register.php?Error=4&name=name&email=email");  
+  		header("Location: register.php?Error=4&name=name&email=email");  
 
   	}
 	else
