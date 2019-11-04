@@ -32,7 +32,7 @@ switch ($Error) {
 return $MessagError;
 
 }
-
+  $smarty->display('register_templates.tpl');
 
 
 
