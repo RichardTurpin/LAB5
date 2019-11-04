@@ -11,6 +11,9 @@ if($db)
 {
 	print_r($_POST);
 	print_r(empty($_POST['name']));
+	print_r(empty($_POST['email']));
+	print_r(empty($_POST['password']));
+	print_r(empty($_POST['password_confirmation']));
 	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
 	{
    		//header("Location: register.php?Error=0");   
