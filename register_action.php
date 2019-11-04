@@ -42,7 +42,7 @@ if($db)
 	else
 	{
   		
-  		$sql_insert = "INSERT INTO users(name,password,email, created_at,updated_at)
+  		$sql_insert = "INSERT INTO users(name,password_digest,email, created_at,updated_at)
                  VALUES('$name','$password','$email',NOW(),NOW())";
 
    		if(!mysql_query($sql_insert,$db))
