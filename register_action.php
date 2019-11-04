@@ -21,15 +21,14 @@ if($db)
 	$query = "SELECT * FROM users WHERE email = '$email'";
 	$result = @ mysql_query($query,$db);
 
-	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
+	if(empty($_POST['name']) or empty($_POST['email'])  ) 
 	{
    		header("Location: register.php?Error=0");   
   	} elseif(mysql_num_rows($result) > 0)
  	 {
       	header("Location: register.php?Error=1");
   	 }
- 	elseif(  $_POST['password'] == '' &&
-     $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
+ 	elseif(empty($_POST['password']) or empty($_POST['password_confirmation']))
   	{
   		header("Location: register.php?Error=3&name=name&email=email");  
 
