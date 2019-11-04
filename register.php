@@ -5,6 +5,7 @@ $smarty = new Smarty();
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
 $smarty->assign("MessagError",$MessagError);
+$smarty->assign('href0',"register.php");
 
 $MessagError=typeError($_GET[$Error]);
 function typeError($Error)
