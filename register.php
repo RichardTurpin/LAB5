@@ -4,6 +4,7 @@ $smarty = new Smarty();
 
 $smarty->template_dir = 'templates';
 $smarty->compile_dir = 'templates_c';
+$smarty->assign("MessagError",$MessagError);
 
 $MessagError=typeError($_GET[$Error]);
 function typeError($Error)
