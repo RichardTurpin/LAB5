@@ -31,10 +31,12 @@ if($db) {
      $tuple[$i] = mysql_fetch_array($result,MYSQL_ASSOC);
     
      // trabalha com o bloco FILMES do template
-$smarty->assign('posts',$tuple);
+
   
 
    } // end for
+   $smarty->assign('posts',$tuple);
+   $smarty->assign('href0',"register.php");
 
   // Mostra a tabela
   $smarty->display('templates/index_templates.tpl');
