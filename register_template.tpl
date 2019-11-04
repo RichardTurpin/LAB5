@@ -25,7 +25,7 @@
         <li><a href="#">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Register</a></li>
+        <li><a href="{$href0}">Register</a></li>
         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
     </div>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Password confirmation:</label>
-      <input type="password" class="form-control" id="pwd" name="password_confirmation" required>
+      <input type="password" class="form-control" id="pwd" name="password_confirmation" >
     </div>
     <div align="center" class="container">
       <button type="button"  " class="btn">Go</button>
