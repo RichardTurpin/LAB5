@@ -31,6 +31,13 @@
     </div>
   </div>
 </nav>
+{if $Error gt -1}
+<div class="container" style="padding-top: 5%">
+    <div class="container-fluid text-center" style="background-color: #ff0000;border-radius:5px">
+            <h2 style="color: white;">{$MessagError}<span class="glyphicon glyphicon-thumbs-up" style="color: green"></span></h2>
+    </div>
+</div>
+{/if}
 <div class="container" >
   <h2 style="color: #ffffff">Register</h2>
   <form class="form-horizontal" action="register_action.php" method="POST">
