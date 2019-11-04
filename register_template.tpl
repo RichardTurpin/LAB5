@@ -48,6 +48,7 @@
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Email:</label>
       <input type="email" class="form-control" id="email" name="email" value="{$email}" >
+    </div>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Password:</label>
       <input type="password" class="form-control" id="pwd" name="password"  >
