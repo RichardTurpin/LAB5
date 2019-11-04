@@ -16,7 +16,7 @@ if($db)
 	print_r(empty($_POST['password_confirmation']));
 	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
 	{
-   		//header("Location: register.php?Error=0");   
+   		header("Location: register.php?Error=0");   
   	}
   	$name  = $_POST['name'];
   	$password = substr(md5($_POST['password']),0,32);
