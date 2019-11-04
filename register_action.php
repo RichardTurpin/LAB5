@@ -10,7 +10,7 @@ $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db)
 {
 	
-	if(!isset($_POST['name']) or !isset($_POST['email']) or !isset($_POST['password']) or !isset($_POST['password_confirmation']) ) 
+	if(empty($_POST['name']) or empty($_POST['email']) or empty($_POST['password']) or empty($_POST['password_confirmation']) ) 
 	{
    		header("Location: register.php?$Error=0");   
   	}
@@ -23,8 +23,7 @@ if($db)
      showerror();
  	elseif(mysql_num_rows($result) > 0)
  	 {
- 	 	print_r($_POST);
-      	//header("Location: register.php?Error=1");
+      	header("Location: register.php?Error=1");
   	 }
  	elseif(  $_POST['password'] == '' &&
      $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
