@@ -24,7 +24,7 @@ if($db)
 	$result = @ mysql_query($query,$db);
 	if(!$result)
      showerror();
- 	if(mysql_num_rows($result) > 0)
+ 	elseif(mysql_num_rows($result) > 0)
  	 {
       	header("Location: register.php?Error=1");
   	 }
