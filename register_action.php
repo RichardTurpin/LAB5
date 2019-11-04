@@ -9,6 +9,9 @@ $smarty->compile_dir = 'templates_c';
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 if($db)
 {
+	$name  = $_POST[name];
+  	$password = substr(md5($_POST['password']),0,32));
+  	$email    = $_POST[email];
 	if( $_POST['name']    == '' or
      $_POST['email']  == '' or
      $_POST['password'] == '' or
@@ -28,19 +31,17 @@ if($db)
  	elseif(  $_POST['password'] == '' &&
      $_POST['password_confirmation']=='' && isset($_POST['name']) && isset($_POST['email']))
   	{
-  		header("Location: register.php?Error=3&name=$_POST['name']&email=$_POST['email']");  
+  		header("Location: register.php?Error=3&name=name&email=email");  
 
   	}
   	elseif(  $_POST['password'] != $_POST['password_confirmation'] )
   	{
-  		header("Location: register.php?Error=4&name=$_POST['name']&email=$_POST['email']");  
+  		header("Location: register.php?Error=4&name=name&email=email");  
 
   	}
 	else
 	{
-  		$name  = $_POST[name];
-  		$password = substr(md5($_POST['password']),0,32));
-  		$email    = $_POST[email];
+  		
   		$sql_insert = "INSERT INTO users(name,password,email, created_at,updated_at)
                  VALUES('$name','$password','$email',NOW(),NOW())";
 
