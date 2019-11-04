@@ -36,18 +36,18 @@
   <form class="form-horizontal" action="register_action.php" method="POST">
     <div class="form-group">
       <label for="usr" style="color: #ffffff">Name:</label>
-      <input type="text" class="form-control" id="usr " name="name" value="{$name}" required>
+      <input type="text" class="form-control" id="usr " name="name" value="{$name}" >
     </div>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Email:</label>
-      <input type="email" class="form-control" id="email" name="email" value="{$email}" required>
+      <input type="email" class="form-control" id="email" name="email" value="{$email}" >
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Password:</label>
-      <input type="password" class="form-control" id="pwd" name="password"  required>
+      <input type="password" class="form-control" id="pwd" name="password"  >
     </div>
     <div class="form-group">
       <label for="pwd" style="color: #ffffff">Password confirmation:</label>
-      <input type="password" class="form-control" id="pwd" name="password_confirmation" required>
+      <input type="password" class="form-control" id="pwd" name="password_confirmation" >
     </div>
     <div align="center" class="container">
       <button type="submit"  " class="btn">Go</button>
